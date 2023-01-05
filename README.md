@@ -1,6 +1,7 @@
 # Biostatistics 755
 ## Introduction to Longitudinal and Multilevel Modeling
 
+For course notes, handouts, and examples see the **Class-Material** folder. For homework and project information see the **Assingments** folder. For general course information see the syllabus.
 
 ## Overview
 
