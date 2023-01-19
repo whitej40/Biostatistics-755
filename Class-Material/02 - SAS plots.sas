@@ -1,7 +1,7 @@
 data wide_lead;
 input ID TRT $ PB1 - PB4;
 datalines;
-  1      P     30.8    26.9    25.8    23.8
+  		1      P     30.8    26.9    25.8    23.8
                 2      A     26.5    14.8    19.5    21.0
                 3      A     25.8    23.0    19.1    23.2
                 4      P     24.7    24.5    22.0    22.5
@@ -102,7 +102,17 @@ datalines;
                99      A     21.9     7.6    10.8    13.0
               100      A     20.7     8.1    25.7    12.3
 ;
-			  run;
+run;
+
+
+*** Adding code to calculate the correlation and covariance matrix;
+
+proc corr data= wide_lead 
+          nomiss /** listwise deletion of missing values (not necessary here, but generally useful) **/
+          cov;   /**  include covariances **/
+var PB1 PB2 PB3 PB4;
+run;
+
 
 *ods rtf file="C:\Users\mclaina\Desktop\output 1.rtf";
 
